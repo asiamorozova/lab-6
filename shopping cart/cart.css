@@ -39,6 +39,10 @@ table th, table td{
 }
 tbody td {
     font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) { 
+    background: violet;
 
 }
 .line-item-total {
