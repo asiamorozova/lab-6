@@ -1,5 +1,6 @@
 import cart from './shoppingcart/cart.js';
 import floaties from '../data.products.js';
+import { findByIdm calcOrderTotal, toUSD } from '..common/utils.js';
 
 
 
@@ -12,9 +13,9 @@ for (let i = 0; i < cart.length; i++) {
     const floaties = findById(fruits, lineItem.id);
     const dom = renderLineItem(lineItem, floaties);
 
-    tboady.appendChild(dom);
+    tbody.appendChild(dom);
 
 }
 
-const oderTotal = calcOrderTotal(cart, floaties);
+const orderTotal = calcOrderTotal(cart, floaties);
 orderTotalCell.textContent = toUSD(orderTotal);
