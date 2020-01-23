@@ -22,7 +22,7 @@ export default function renderFloaties(floaties) {
     //const price = document.createElement('p');
     //price.classList.add('price');
     //price.textContent = '$' + price.toFixed(2);
-    // li.appendChild(p);
+    //li.appendChild(p);
 
     const button = document.createElement('button');
     button.textContent = 'Add';

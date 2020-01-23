@@ -1,0 +1,52 @@
+
+table, order-now-container {
+    width: 100%;
+    max-width: 666px;
+    margin: auto;
+}
+
+.order-now-container{
+    text-align: right;
+
+}
+
+.order-now-container button {
+    margin-top: 60 px;
+    height: 60 px;
+    width: 300 px;
+    font-size: 1.50em;
+    background-color: blueviolet;
+    color: blanchedalmond;
+
+}
+
+table {
+    border: 1px solid #bbbbbb;
+
+}
+
+thead {
+    background: crimson;
+    color: seagreen;
+}
+table th, table td{
+    text-align: right;
+    padding: 20 px;
+
+}
+.align-left{
+    text-align: right;
+}
+tbody td {
+    font-size: 0.9rem;
+
+}
+.line-item-total {
+    front-weight: bolder;
+}
+
+tfoot{
+    background: #777777
+    color: white;
+
+}
