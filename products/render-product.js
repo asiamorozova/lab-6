@@ -1,4 +1,4 @@
-import { findById } from "../common/utils";
+import { findById } from '../common/utils.js';
 
 export default function renderFloaties(floaties) {
     const li = document.createElement('li');
@@ -34,35 +34,32 @@ export default function renderFloaties(floaties) {
         if (json) {
             cart = JSON.parse(json);
         }
-        esle
-        cart = [];
-    }
-        let lineItem = findById(cart, floarties.id);
-    if (!lineItem) {
-        lineItem = {
-            id: floaties.id,
-            quantity: 1
-        };
-        cart.push(lineItem);
-    }
-
-    cart.push(lineItem);
-}
         else {
-    lineItem.quantity++;
+            cart = [];
+        }
+        let lineItem = findById(cart, floarties.id);
+        if (!lineItem) {
+            lineItem = {
+                id: floaties.id,
+                quantity: 1
+            };
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
 
-}
-json = JSON.stringify(cart);
-localStorage.setItem('cart' json);
+        }
+        json = JSON.stringify(cart);
+        localStorage.setItem('cart', json);
 
-alert('1' + floaties.name + 'added to cart');
-});
+        alert('1' + floaties.name + 'added to cart');
+    });
 
-p.appendChild(button);
+    p.appendChild(button);
 
 
 
-return li;
+    return li;
 }
 
 
