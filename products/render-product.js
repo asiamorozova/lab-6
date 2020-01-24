@@ -37,7 +37,7 @@ export default function renderFloaties(floaties) {
         else {
             cart = [];
         }
-        let lineItem = findById(cart, floarties.id);
+        let lineItem = findById(cart, floaties.id);
         if (!lineItem) {
             lineItem = {
                 id: floaties.id,
@@ -55,9 +55,10 @@ export default function renderFloaties(floaties) {
         alert('1' + floaties.name + 'added to cart');
     });
 
-    p.appendChild(button);
 
 
+
+    li.appendChild(button);
 
     return li;
 }
