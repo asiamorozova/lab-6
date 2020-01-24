@@ -18,7 +18,7 @@ export default function renderLineItem(lineItem, floaties) {
 
     //puting out a price element
     const priceCell = document.createElement('td');
-    priceCell.textContent = lineItem.price;
+    priceCell.textContent = floaties.price;
     tr.appendChild(priceCell);
 
     //putting out price element 

@@ -35,7 +35,7 @@ if (shoppingCart.lenght === 0) {
 else {
     placeOrderButton.addEventListener('click', () => {
         localStorage.removeItem('cart');
-        alert('Order place:\n' + JSON.stringify(cart, true, 2));
+        alert('Order place:\n' + JSON.stringify(shoppingCart, true, 2));
         window.location = '../';
 
     });
