@@ -19,10 +19,10 @@ export default function renderFloaties(floaties) {
     description.textContent = floaties.description;
     li.appendChild(description);
 
-    //const price = document.createElement('p');
-    //price.classList.add('price');
-    //price.textContent = '$' + price.toFixed(2);
-    //li.appendChild(p);
+    const price = document.createElement('p');
+    price.classList.add('price');
+    price.textContent = '$' + floaties.price;
+    li.appendChild(price);
 
     const button = document.createElement('button');
     button.textContent = 'Add';
