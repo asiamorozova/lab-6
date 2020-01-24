@@ -2,7 +2,7 @@
 
 
 //funciton takes line item and a product from the floaties file and outputs corresponding name in the cell alloted to name 
-function renderLineItem(lineItem, floaties) {
+export default function renderLineItem(lineItem, floaties) {
     const tr = document.createElement('tr');
 
     //alignning the output 
@@ -18,14 +18,14 @@ function renderLineItem(lineItem, floaties) {
 
     //puting out a price element
     const priceCell = document.createElement('td');
-    priceCell.textContent = lineItem.price('td');
+    priceCell.textContent = lineItem.price;
     tr.appendChild(priceCell);
 
     //putting out price element 
-    const priceCell = docuemnt.createElement('td');
+    const totalCell = document.createElement('td');
     totalCell.className = 'line-item-total';
-    const total = lineItem.quantity * fruit.price;
-    totalCell.textContent = toUSD(total);
+    const total = lineItem.quantity * floaties.price;
+    totalCell.textContent = (total);
     tr.appendChild(totalCell);
 
     return tr;

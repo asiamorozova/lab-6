@@ -14,12 +14,12 @@ export function findById(items, id) {
     return null;
 }
 
-export function toUSD(number) {
-    return number.toLocaleStrin('en-US', {
-        style: 'curency',
-        curency: 'USD'
-    });
-}
+// export function toUSD(number) {
+//     return number.toLocaleString('en-US', {
+//         style: 'curency',
+//         curency: 'USD'
+//     });
+// }
 
 export function calcLineTotal(quantity, price) {
     const ammount = quantity * price;
