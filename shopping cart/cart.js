@@ -8,14 +8,39 @@ import renderLineItem from './render-line-items.js';
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 
-for (let i = 0; i < cart.length; i++) {
-    const lineItem = cart[i];
+const placeOrderButton = document.getElementById('place-order-button');
+
+const json = localStorage.getItem('cart');
+let shoppingCart;
+if (json) {
+    cart = JSON.parse(json);
+}
+else {
+    shoppingCart = [];
+}
+for (let i = 0; i < shoppingCart.length; i++) {
+    const lineItem = shoppingCart[i];
     const floatie = findById(floaties, lineItem.id);
     const dom = renderLineItem(lineItem, floatie);
 
     tbody.appendChild(dom);
+}
+
+const orderTotal = calcOrderTotal(shoppingCart, floaties);
+orderTotalCell.textContent = orderTotal;
+
+if (shoppingCart.lenght === 0) {
+    placeOrderButton.disabled = true;
+}
+else {
+    placeOrderButton.addEventListener('click', () => {
+        localStorage.removeItem('cart');
+        alert('Order place:\n' + JSON.stringify(cart, true, 2));
+        window.location = '../';
+
+    });
 
 }
 
-const orderTotal = calcOrderTotal(cart, floaties);
-orderTotalCell.textContent = (orderTotal);
+//const orderTotal = calcOrderTotal(shoppingCart, floaties);
+//orderTotalCell.textContent = (orderTotal);

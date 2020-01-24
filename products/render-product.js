@@ -1,3 +1,4 @@
+import { findById } from "../common/utils";
 
 export default function renderFloaties(floaties) {
     const li = document.createElement('li');
@@ -26,10 +27,42 @@ export default function renderFloaties(floaties) {
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = floaties.code;
-    p.appendChild(button);
+    button.value = floaties.id;
+    button.addEventListener('click', () => {
+        let json = localStorage.getItem('cart');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        }
+        esle
+        cart = [];
+    }
+        let lineItem = findById(cart, floarties.id);
+    if (!lineItem) {
+        lineItem = {
+            id: floaties.id,
+            quantity: 1
+        };
+        cart.push(lineItem);
+    }
 
-
-
-    return li;
+    cart.push(lineItem);
 }
+        else {
+    lineItem.quantity++;
+
+}
+json = JSON.stringify(cart);
+localStorage.setItem('cart' json);
+
+alert('1' + floaties.name + 'added to cart');
+});
+
+p.appendChild(button);
+
+
+
+return li;
+}
+
+
