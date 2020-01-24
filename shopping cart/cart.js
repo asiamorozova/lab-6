@@ -1,4 +1,4 @@
-import cart from '../data/cart.js';
+// import cart from '../data/cart.js';
 import floaties from '../data/product.js';
 import { findById, calcOrderTotal } from '../common/utils.js';
 import renderLineItem from './render-line-items.js';
@@ -13,7 +13,7 @@ const placeOrderButton = document.getElementById('place-order-button');
 const json = localStorage.getItem('cart');
 let shoppingCart;
 if (json) {
-    cart = JSON.parse(json);
+    shoppingCart = JSON.parse(json);
 }
 else {
     shoppingCart = [];
@@ -42,5 +42,4 @@ else {
 
 }
 
-//const orderTotal = calcOrderTotal(shoppingCart, floaties);
-//orderTotalCell.textContent = (orderTotal);
+
